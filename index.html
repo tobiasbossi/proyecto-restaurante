@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carta de Presentación</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!--Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+</head>
+<body class="bg-light">
+
+  <header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Carta de menu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="orden/contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="orden/nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="orden/redes.html">Redes</a></li>
+          <li class="nav-item"><a class="nav-link" href="orden/ubicacion.html">Ubicacion</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="bg-dark text-white text-center py-5">
+      <div class="container">
+        <h1 class="display-4">Bienvenidos a ¡A Punto!</h1>
+        <p class="lead">Comida casera con sabor único</p>
+      </div>
+    </div>
+
+    <div class="text-end me-3 mt-2">
+      🛒 Carrito: <span id="contador">0</span>
+    </div>
+  </header>
+
+  
+  <main>
+    <section id="menu" class="container py-5">
+      <h2 class="text-center mb-4">Nuestra Carta</h2>
+      <h3 class="text-center mb-4">Entradas</h3>
+      <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+        <div class="col">
+          <div class="card h-100">
+            <img src="/imagen/empanadas.jpg" class="card-img-top" alt="Empanadas">
+            <div class="card-body">
+              <h5 class="card-title">Empanadas</h5>
+              <p class="card-text">Empanadas de carne cortada a cuchillo.</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <strong>$1500</strong>
+              <a href="#" class="btn btn-primary btn-sm" onclick="agregarAlCarrito('Empanadas')">Agregar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="/imagen/rabas.jpg" class="card-img-top" alt="Rabas">
+            <div class="card-body">
+              <h5 class="card-title">Rabas</h5>
+              <p class="card-text">Rabas rebozadas con pan rallado.</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <strong>$1800</strong>
+              <a href="#" class="btn btn-primary btn-sm" onclick="agregarAlCarrito('Rabas')">Agregar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="text-center my-5">Platos principales</h3>
+      <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+        <div class="col">
+          <div class="card h-100">
+            <img src="/imagen/milas.jpg" class="card-img-top" alt="Milanesa">
+            <div class="card-body">
+              <h5 class="card-title">Milanesa con Papas</h5>
+              <p class="card-text">Clásica milanesa con papas fritas doradas.</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <strong>$8500</strong>
+              <a href="#" class="btn btn-primary btn-sm" onclick="agregarAlCarrito('Milanesa')">Agregar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="/imagen/parrillita.jpg" class="card-img-top" alt="Parrillada">
+            <div class="card-body">
+              <h5 class="card-title">Parrillada para dos o 4 personas</h5>
+              <p class="card-text">Clásica parrillada con carne y achuras.</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <strong>$10500</strong>
+              <a href="#" class="btn btn-primary btn-sm" onclick="agregarAlCarrito('Parrillada')">Agregar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="text-center my-5">Bebidas y Postre</h3>
+      <div class="row justify-content-center g-4">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+          <div class="card h-100" style="max-width: 560px; width: 100%;">
+            <img src="/imagen/latitas.jpg" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Bebidas">
+            <div class="card-body">
+              <h5 class="card-title">Bebidas</h5>
+              <p class="card-text">Bebidas gaseosas a elección.</p>
+              <label for="bebidaSelect" class="form-label">Elegí tu bebida:</label>
+              <select id="bebidaSelect" class="form-select form-select-sm">
+                <option value="Coca-Cola">Coca-Cola</option>
+                <option value="Sprite">Sprite</option>
+                <option value="Fanta">Fanta</option>
+              </select>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <strong>$4500</strong>
+              <a href="#" class="btn btn-primary btn-sm" onclick="agregarBebidaAlCarrito()">Agregar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+          <div class="card h-100" style="max-width: 560px; width: 100%;">
+            <img src="/imagen/tiramisu.jpg" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Postre">
+            <div class="card-body">
+              <h5 class="card-title">Postre</h5>
+              <p class="card-text">Tiramisú artesanal.</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <strong>$6500</strong>
+              <a href="#" class="btn btn-primary btn-sm" onclick="agregarAlCarrito('Tiramisú')">Agregar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-light text-center py-3 mt-5">
+    <p>© 2025 Parrillada Deliciosa - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    let cantidad = 0;
+
+    function agregarAlCarrito(producto) {
+      cantidad++;
+      document.getElementById("contador").innerText = cantidad;
+      alert(producto + " agregado al carrito");
+    }
+
+    function agregarBebidaAlCarrito() {
+      const bebidaSeleccionada = document.getElementById("bebidaSelect").value;
+      agregarAlCarrito(bebidaSeleccionada);
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
