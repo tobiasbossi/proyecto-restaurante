@@ -1,0 +1,251 @@
+ /* Tipografía general */
+:root {
+  --color-primario: #8b7373;
+  --color-secundario: #4e4a4a;
+  --color-texto: #4a4a4a;
+  --color-fondo: #fff8f0;
+  --color-footer: #2c2c2c;
+}
+
+
+ body {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Estilo para encabezado principal */
+header {
+  background-color: #660606;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Párrafos del header */
+header p {
+  font-style: italic;
+}
+
+/* Títulos */
+h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--color-primario);
+}
+
+h2 {
+  color: #b33a3a;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  color: #8a2c2c;
+  font-weight: 600;
+}
+
+h5.card-title {
+  font-weight: 700;
+  color: #333;
+}
+
+/* Lista destacada */
+.list-group-item {
+  font-size: 1.05rem;
+  padding: 0.75rem 1rem;
+}
+
+/* Estilo para imágenes */
+.card-img-top {
+  
+  max-height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-fluid {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Estilo de tarjetas */
+.card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+/* Botón Agregar */
+.btn-primary.btn-sm {
+  font-size: 0.85rem;
+  background-color: #a22e2e;
+  border-color: #912828;
+}
+
+/* Sección reseñas */
+.review-card {
+  max-width: 600px;
+  background-color: #fff;
+  border-left: 5px solid #b33a3a;
+  font-style: italic;
+  font-size: 1.2rem;
+   color: #333;
+}
+
+.review-author {
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #2c2c2c;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .card-img-top {
+    height: 150px;
+  }
+}
+
+.hero-header {
+  background-image: url('../imagen/parrilla-bg.jpg'); 
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.hero-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); 
+}
+
+.hero-header .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-header h1 {
+  font-weight: 700;
+  text-shadow: 2px 2px 5px #000;
+}
+/* Navbar base */
+.navbar {
+  background-color: var(--color-secundario);
+  color: white;
+  padding: 0.75rem 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-primario);
+  text-decoration: none;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: var(--color-primario);
+  color: white;
+}
+
+/* Botón hamburguesa */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  position: relative;
+  width: 28px;
+  height: 22px;
+}
+
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: "";
+  display: block;
+  background-color: white;
+  height: 3px;
+  border-radius: 2px;
+  position: absolute;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle .hamburger {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-toggle .hamburger::before {
+  top: 0;
+}
+
+.nav-toggle .hamburger::after {
+  bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-secundario);
+    width: 200px;
+    flex-direction: column;
+    display: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}

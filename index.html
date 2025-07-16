@@ -3,64 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carta de Presentación</title>
+  <title>Parrilla ¡A Punto!</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./CSS/styles.css" />
 
-  <!--Fonts -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-light">
-
   <header>
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Carta de menu</a>
+      <a class="navbar-brand" href="#"><i class="fa-solid fa-fire me-2"></i>Carta de Menú</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="orden/contacto.html">Contacto</a></li>
-          <li class="nav-item"><a class="nav-link" href="orden/nosotros.html">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="orden/redes.html">Redes</a></li>
-          <li class="nav-item"><a class="nav-link" href="orden/ubicacion.html">Ubicacion</a></li>
+          <li class="nav-item"><a class="nav-link" href="./orden/contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="./orden/redes.html">Redes</a></li>
+          <li class="nav-item"><a class="nav-link" href="./orden/ubicacion.html">Ubicación</a></li>
+          <li class="nav-item"><a class="nav-link" href="./orden/nosotros.html">Nosotros</a></li>
         </ul>
       </div>
     </div>
   </nav>
-    <div class="bg-dark text-white text-center py-5">
-      <div class="container">
-        <h1 class="display-4">Bienvenidos a ¡A Punto!</h1>
-        <p class="lead">Comida casera con sabor único</p>
-      </div>
-    </div>
-
-    <div class="text-end me-3 mt-2">
-      🛒 Carrito: <span id="contador">0</span>
-    </div>
-  </header>
-
   
+  <!-- HERO HEADER -->
+  <div class="hero-header text-white text-center">
+    <div class="container">
+      <h1 class="display-3">Bienvenidos a ¡A Punto!</h1>
+      <p class="lead">Comida casera con sabor único</p>
+    </div>
+  </div>
+  </header>
+  
+  <!-- MENÚ -->
   <main>
     <section id="menu" class="container py-5">
-      <h2 class="text-center mb-4">Nuestra Carta</h2>
-      <h3 class="text-center mb-4">Entradas</h3>
+      <h2 class="text-center mb-4"><i class="fa-solid fa-utensils me-2"></i>Nuestra Carta</h2>
+
+      <h3 class="text-center mb-4"><i class="fa-solid fa-seedling me-2"></i>Entradas</h3>
       <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
         <div class="col">
           <div class="card h-100">
             <img src="imagen/empanadas.jpg" class="card-img-top" alt="Empanadas">
             <div class="card-body">
-              <h5 class="card-title">Empanadas</h5>
+              <h5 class="card-title"><i class="fa-solid fa-bacon me-2"></i>Empanadas</h5>
               <p class="card-text">Empanadas de carne cortada a cuchillo.</p>
             </div>
             <div class="card-footer d-flex justify-content-between align-items-center">
               <strong>$1500</strong>
-              <a href="#" class="btn btn-primary btn-sm" onclick="agregarAlCarrito('Empanadas')">Agregar</a>
+              <a href="#" class="btn btn-primary btn-sm" onclick="agregarAlCarrito('Empanadas', 1500)">Agregar</a>
             </div>
           </div>
         </div>
@@ -69,29 +71,29 @@
           <div class="card h-100">
             <img src="imagen/rabas.jpg" class="card-img-top" alt="Rabas">
             <div class="card-body">
-              <h5 class="card-title">Rabas</h5>
+              <h5 class="card-title"><i class="fa-solid fa-fish-fins me-2"></i>Rabas</h5>
               <p class="card-text">Rabas rebozadas con pan rallado.</p>
             </div>
             <div class="card-footer d-flex justify-content-between align-items-center">
               <strong>$1800</strong>
-              <a href="#" class="btn btn-primary btn-sm" onclick="agregarAlCarrito('Rabas')">Agregar</a>
+              <a href="#" class="btn btn-primary btn-sm" onclick="agregarAlCarrito('Rabas', 1800)">Agregar</a>
             </div>
           </div>
         </div>
       </div>
 
-      <h3 class="text-center my-5">Platos principales</h3>
+      <h3 class="text-center my-5"><i class="fa-solid fa-drumstick-bite me-2"></i>Platos principales</h3>
       <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
         <div class="col">
           <div class="card h-100">
             <img src="imagen/milanesa.jpg" class="card-img-top" alt="Milanesa">
             <div class="card-body">
-              <h5 class="card-title">Milanesa con Papas</h5>
+              <h5 class="card-title"><i class="fa-solid fa-bone me-2"></i>Milanesa con Papas</h5>
               <p class="card-text">Clásica milanesa con papas fritas doradas.</p>
             </div>
             <div class="card-footer d-flex justify-content-between align-items-center">
               <strong>$8500</strong>
-              <a href="#" class="btn btn-primary btn-sm" onclick="agregarAlCarrito('Milanesa')">Agregar</a>
+              <a href="#" class="btn btn-primary btn-sm" onclick="agregarAlCarrito('Milanesa con Papas', 8500)">Agregar</a>
             </div>
           </div>
         </div>
@@ -100,24 +102,24 @@
           <div class="card h-100">
             <img src="imagen/parrillita.jpg" class="card-img-top" alt="Parrillada">
             <div class="card-body">
-              <h5 class="card-title">Parrillada para dos o 4 personas</h5>
+              <h5 class="card-title"><i class="fa-solid fa-fire-burner me-2"></i>Parrillada para 2 o 4</h5>
               <p class="card-text">Clásica parrillada con carne y achuras.</p>
             </div>
             <div class="card-footer d-flex justify-content-between align-items-center">
               <strong>$10500</strong>
-              <a href="#" class="btn btn-primary btn-sm" onclick="agregarAlCarrito('Parrillada')">Agregar</a>
+              <a href="#" class="btn btn-primary btn-sm" onclick="agregarAlCarrito('Parrillada', 10500)">Agregar</a>
             </div>
           </div>
         </div>
       </div>
 
-      <h3 class="text-center my-5">Bebidas y Postre</h3>
+      <h3 class="text-center my-5"><i class="fa-solid fa-mug-hot me-2"></i>Bebidas y Postre</h3>
       <div class="row justify-content-center g-4">
         <div class="col-12 col-md-6 d-flex justify-content-center">
           <div class="card h-100" style="max-width: 560px; width: 100%;">
             <img src="imagen/latitas.jpg" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Bebidas">
             <div class="card-body">
-              <h5 class="card-title">Bebidas</h5>
+              <h5 class="card-title"><i class="fa-solid fa-beer-mug-empty me-2"></i>Bebidas</h5>
               <p class="card-text">Bebidas gaseosas a elección.</p>
               <label for="bebidaSelect" class="form-label">Elegí tu bebida:</label>
               <select id="bebidaSelect" class="form-select form-select-sm">
@@ -137,35 +139,63 @@
           <div class="card h-100" style="max-width: 560px; width: 100%;">
             <img src="imagen/tiramisu.jpg" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Postre">
             <div class="card-body">
-              <h5 class="card-title">Postre</h5>
+              <h5 class="card-title"><i class="fa-solid fa-ice-cream me-2"></i>Tiramisú</h5>
               <p class="card-text">Tiramisú artesanal.</p>
             </div>
             <div class="card-footer d-flex justify-content-between align-items-center">
               <strong>$6500</strong>
-              <a href="#" class="btn btn-primary btn-sm" onclick="agregarAlCarrito('Tiramisú')">Agregar</a>
+              <a href="#" class="btn btn-primary btn-sm" onclick="agregarAlCarrito('Tiramisú', 6500)">Agregar</a>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- CARRITO -->
+    <section class="container mt-5" id="carrito-contenedor">
+      <h4><i class="fa-solid fa-cart-shopping me-2"></i>Tu pedido:</h4>
+      <ul id="lista-carrito" class="list-group mb-3"></ul>
+      <p><strong>Total: $<span id="total">0</span></strong></p>
+      <p>Cantidad de ítems: <span id="contador">0</span></p>
+    </section>
   </main>
 
   <footer class="bg-dark text-light text-center py-3 mt-5">
-    <p>© 2025 Parrillada Deliciosa - Todos los derechos reservados</p>
+    <p>© 2025 Parrillada ¡A Punto! - Todos los derechos reservados</p>
   </footer>
 
+  <!-- Scripts -->
   <script>
-    let cantidad = 0;
+    const carrito = [];
+    let total = 0;
 
-    function agregarAlCarrito(producto) {
-      cantidad++;
-      document.getElementById("contador").innerText = cantidad;
-      alert(producto + " agregado al carrito");
+    function agregarAlCarrito(nombre, precio) {
+      carrito.push({ nombre, precio });
+      total += precio;
+      actualizarCarrito();
     }
 
     function agregarBebidaAlCarrito() {
-      const bebidaSeleccionada = document.getElementById("bebidaSelect").value;
-      agregarAlCarrito(bebidaSeleccionada);
+      const bebida = document.getElementById("bebidaSelect").value;
+      const precio = 4500;
+      agregarAlCarrito(bebida, precio);
+    }
+
+    function actualizarCarrito() {
+      const lista = document.getElementById("lista-carrito");
+      const contador = document.getElementById("contador");
+      const totalElemento = document.getElementById("total");
+
+      lista.innerHTML = "";
+      carrito.forEach((producto) => {
+        const item = document.createElement("li");
+        item.className = "list-group-item d-flex justify-content-between align-items-center";
+        item.innerHTML = `${producto.nombre} <span>$${producto.precio}</span>`;
+        lista.appendChild(item);
+      });
+
+      contador.innerText = carrito.length;
+      totalElemento.innerText = total;
     }
   </script>
 
